@@ -96,7 +96,7 @@
 				$.ajax({
 					url: "Controller",    // MVC는 무조건 Controller로 가야한다
 	                type: "POST",              // 요청 방법(GET/POST)
-	                data: "type=search"+
+	                data: "type=search&page=emp"+
 	                		"&searchType="+encodeURIComponent(type)+
 	                		"&searchValue="+encodeURIComponent(value),
 				}).done(function(res){
