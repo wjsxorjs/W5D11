@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>게시판</title>
-<style type="text/css"> 
+<style type="text/css">
 	#bbs table {
 	    width:580px;
 	    margin-left:10px;
@@ -79,6 +79,7 @@
 </style>
 </head>
 <body>
+	<jsp:include page="/jsp/menu.jsp"/>
 	<div id="bbs">
 		<table summary="게시판 목록">
 			<caption>게시판 목록</caption>
@@ -103,7 +104,7 @@
               		</td>
 					<td>
 					<input type="button" value="글쓰기"
-	onclick="javascript:location.href='write.jsp'"/>
+	onclick="javascript:location.href='Controller?type=write&bname=bbs'"/>
 					</td>
 				</tr>
 			</tfoot>
@@ -134,14 +135,6 @@
 			%>
 			</tbody>
 		</table>
-		<hr/>
-		<button onclick="exe()" type="button">버튼!</button>
 	</div>
-	<script>
-		function exe(){
-			location.href = "Controller?type=list&bname=notice";
-			
-		}
-	</script>
 </body>
 </html>
