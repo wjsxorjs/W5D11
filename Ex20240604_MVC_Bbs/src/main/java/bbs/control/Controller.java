@@ -140,7 +140,7 @@ private static final long serialVersionUID = 1L;
 		
 		// type이 null이면 기본객체 인식할 수 있도록 초기값 넣기
 		if(type == null) {
-			type = "list";
+			type = "index";
 		}
 		
 		// type으로 받은 값이 actionMap에 key로 사용되고 있으므로
