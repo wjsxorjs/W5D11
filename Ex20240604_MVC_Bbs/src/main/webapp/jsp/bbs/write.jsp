@@ -62,9 +62,10 @@
 </head>
 <body>
 	<div id="bbs">
-	<form action="write_ok.jsp" method="post" 
+	<form action="Controller?type=write" method="post" 
 	encType="multipart/form-data"> <%-- form에 파일을 첨부하게 될 때
 										encType을 multipart로 지정 --%>
+		<input type="hidden" name="bname" value="bbs"/>
 		<table summary="게시판 글쓰기">
 			<caption>게시판 글쓰기</caption>
 			<tbody>

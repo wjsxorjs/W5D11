@@ -61,8 +61,9 @@
 </head>
 <body>
 	<div id="bbs">
-	<form action="write_ok.jsp" method="post" 
+	<form action="Controller?type=write" method="post" 
 	encType="multipart/form-data">
+		<input type="hidden" name="bname" value="notice"/>
 		<table summary="게시판 글쓰기">
 			<caption>게시판 글쓰기</caption>
 			<tbody>
