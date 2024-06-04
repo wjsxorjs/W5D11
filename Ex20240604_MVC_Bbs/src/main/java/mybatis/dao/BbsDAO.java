@@ -32,7 +32,33 @@ public class BbsDAO {
 		return b_ar;
 	}
 	
-	
+	public static void add(String title, String writer, String content, String fname, String oname, String ip, String b_name) {
+		
+		SqlSession ss = FactoryService.getFactory().openSession();
+		
+		HashMap<String, String> b_map = new HashMap<>();
+		
+		b_map.put("subject", title);
+		b_map.put("writer", writer);
+		b_map.put("content", content);
+		b_map.put("file_name", fname);
+		b_map.put("ori_name", oname);
+		b_map.put("ip", ip);
+		b_map.put("bname", b_name);
+		
+		int chk = ss.insert("bbs.add",b_map);
+		
+		if(chk == 1) {
+			ss.commit();
+		} else {
+			ss.rollback();
+		}
+		ss.close();
+		
+		
+		return;
+		
+	}
 	
 	
 }
